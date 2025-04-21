@@ -1,0 +1,11 @@
+<div *ngIf="decoded">
+    <ng-container *ngFor="let component of switchOnPermission(decoded?.permission)">
+      <ng-container [ngSwitch]="component">
+        <app-get-cats *ngSwitchCase="'GetCatsComponent'"></app-get-cats>
+        <app-get-catbyid *ngSwitchCase="'GetCatByIdComponent'"></app-get-catbyid>
+        <app-patch-cat *ngSwitchCase="'PatchCatComponent'"></app-patch-cat>
+        <app-post-cat *ngSwitchCase="'PostCatComponent'"></app-post-cat>
+        <app-delete-cat *ngSwitchCase="'DeleteCatComponent'"></app-delete-cat>
+      </ng-container>
+    </ng-container>
+  </div>

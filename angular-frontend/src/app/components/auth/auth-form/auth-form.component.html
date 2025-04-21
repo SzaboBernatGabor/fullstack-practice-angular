@@ -1,0 +1,34 @@
+<div class="container">
+    <form>
+      <p>
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          (input)="handleInputChange($event)"
+          class="input-field"
+        />
+      </p>
+      <p>
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          minlength="8"
+          (input)="handleInputChange($event)"
+          class="input-field"
+        />
+      </p>
+      <p>
+        <button type="button" (click)="fetchAuth('register')" class="btn">
+          Signup
+        </button>
+        <button type="button" (click)="fetchAuth('login')" class="btn float-right">
+          Signin
+        </button>
+      </p>
+    </form>
+    <p *ngIf="responseFunc()" [ngClass]="{'text-red': data?.includes('Error') || data?.includes('Bad Request') || data?.includes('Unauthorized'), 'text-green': data === 'Account Created'}">
+      {{ responseFunc() }}
+    </p>
+  </div>

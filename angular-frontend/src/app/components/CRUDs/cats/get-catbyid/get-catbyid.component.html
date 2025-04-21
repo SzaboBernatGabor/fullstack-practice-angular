@@ -1,0 +1,17 @@
+<div [class]="divStyle">
+    <h1 [class]="h1Style">Get cat by id</h1>
+    <input
+      type="text"
+      placeholder="Cat id"
+      id="catId"
+      (input)="handleInputChange($event)"
+      [class]="inputStyle"
+    />
+    <button (click)="fetchCatById()" [class]="buttonStyle">GET BY ID</button>
+    <div *ngIf="error" class="text-red-600">{{ error }}</div>
+    <div *ngIf="data" [class]="divStyle">
+        <div [class]="textStyle">Name: {{ data?.name }}</div>
+        <div [class]="textStyle">Breed: {{ data?.breed }}</div>
+        <div [class]="textStyle">Age: {{ data?.age }}</div>
+    </div>
+  </div>

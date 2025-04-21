@@ -1,0 +1,27 @@
+/* header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  nav {
+    background-color: #2d2d2d;
+    padding: 1rem;
+    width: 100%;
+    direction: rtl;
+  }
+  
+  ul {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.25rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  } */

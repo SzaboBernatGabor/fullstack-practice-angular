@@ -1,0 +1,35 @@
+<div [class]="divStyle">
+    <h1 [class]="h1Style">Patch User</h1>
+    <div class="form-group">
+      <input
+        id="_id"
+        placeholder="User id"
+        type="text"
+        (input)="handleInputChange($event)"
+        [class]="inputStyle"
+      />
+      <input
+        id="active"
+        placeholder="Activation status (true or false)"
+        type="text"
+        (input)="handleInputChange($event)"
+        [class]="inputStyle"
+      />
+      <input
+        id="permission"
+        placeholder="Permission level (0-2)"
+        type="number"
+        min="0"
+        max="2"
+        (input)="handleInputChange($event)"
+        [class]="inputStyle"
+      />
+      <button (click)="fetchPatchUser()" [class]="buttonStyle">PATCH</button>
+    </div>
+    <div *ngIf="error" class="text-red-500">{{ error }}</div>
+    <div *ngIf="data">
+      <div [class]="textStyle">
+        User modified with id: {{ data?._id }}
+      </div>
+    </div>
+  </div>

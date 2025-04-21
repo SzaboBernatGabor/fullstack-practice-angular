@@ -1,0 +1,40 @@
+<div [class]="divStyle">
+    <h1 [class]="h1Style">Patch Cat</h1>
+    <div class="form-group">
+      <input
+        id="id"
+        placeholder="Cat id"
+        type="text"
+        (input)="handleInputChange($event)"
+        [class]="inputStyle"
+      />
+      <input
+        id="name"
+        placeholder="Cat name"
+        type="text"
+        (input)="handleInputChange($event)"
+        [class]="inputStyle"
+      />
+      <input
+        id="breed"
+        placeholder="Cat breed"
+        type="text"
+        (input)="handleInputChange($event)"
+        [class]="inputStyle"
+      />
+      <input
+        id="age"
+        placeholder="Cat age"
+        type="number"
+        min="0"
+        max="35"
+        (input)="handleInputChange($event)"
+        [class]="inputStyle"
+      />
+      <button (click)="fetchPatchCat()" [class]="buttonStyle">PATCH</button>
+    </div>
+    <div *ngIf="error" class="text-red-500">{{ error }}</div>
+    <div *ngIf="data">
+      <div [class]="textStyle">Cat modified with id: {{ data._id }}</div>
+    </div>
+  </div>

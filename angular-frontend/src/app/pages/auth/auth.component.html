@@ -1,0 +1,8 @@
+<div *ngIf="hasToken">
+    <p>You are already logged in.</p>
+  </div>
+  <div *ngIf="!hasToken">
+    <main class="flex min-h-screen flex-col items-center justify-start p-24">
+      <app-auth-form></app-auth-form>
+    </main>
+  </div>

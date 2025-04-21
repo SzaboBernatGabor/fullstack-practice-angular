@@ -1,0 +1,12 @@
+<div [class]="divStyle">
+  <h1 [class]="h1Style">Get all users</h1>
+  <button (click)="fetchAllUsers()" [class]="buttonStyle">GET ALL / HIDE</button>
+  <div *ngIf="!hidden">
+    <div *ngFor="let item of data" class="user-item">
+      <div [class]="textStyle">Id: {{ item._id }}</div>
+      <div [class]="textStyle">Email: {{ item.email }}</div>
+      <div [class]="textStyle">Active: {{ item.active }}</div>
+      <div [class]="textStyle">Permission: {{ item.permission }}</div>
+    </div>
+  </div>
+</div>

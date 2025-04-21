@@ -1,0 +1,14 @@
+<div [class]="divStyle">
+    <h1 [class]="h1Style">Post Cat</h1>
+    <div>
+      <input id="name" placeholder="Cat name" (input)="handleInputChange($event)" [class]="inputStyle" />
+      <input id="breed" placeholder="Cat breed" (input)="handleInputChange($event)" [class]="inputStyle"/>
+      <input id="age" type="number" placeholder="Cat age" (input)="handleInputChange($event)" [class]="inputStyle" min="1" max="35"/>
+      <!-- <input id="image" type="file" (change)="handleInputChange($event)" [class]="inputStyle"/> Kép nincs implementálva-->
+      <button (click)="fetchPostCat()" [class]="buttonStyle">POST</button>
+    </div>
+    <div *ngIf="error" class="text-red-500">{{ error }}</div>
+    <div *ngIf="data">
+      <div [class]="textStyle">Cat posted with id: {{ data._id }}</div>
+    </div>
+  </div>

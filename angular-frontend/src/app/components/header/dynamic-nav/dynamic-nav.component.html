@@ -1,0 +1,13 @@
+
+  <li *ngIf="permission !== undefined && permission !== null">
+    <a routerLink="/cats" class="hover:text-gray-300">Cats</a>
+  </li>
+  <li *ngIf="permission === 2">
+    <a routerLink="/admin" class="hover:text-gray-300">Users</a>
+  </li>
+  <li *ngIf="permission === undefined || permission === null">
+    <a routerLink="/auth" class="hover:text-gray-300">Signin/Signup</a>
+  </li>
+  <li *ngIf="permission !== undefined && permission !== null">
+    <button type="button" (click)="logout()" class="hover:text-gray-300">Logout</button>
+  </li>

@@ -1,0 +1,16 @@
+<div [class]="divStyle">
+  <h1 [class]="h1Style">Delete User</h1>
+  <input
+    id="userEmail"
+    placeholder="User email"
+    (input)="handleInputChange($event)"
+    [class]="inputStyle"
+  />
+  <button (click)="fetchDelete()" [class]="buttonStyle">DELETE</button>
+  <div *ngIf="error" class="text-red-500">{{ error }}</div>
+  <div *ngIf="data">
+    <div [class]="textStyle">
+      User deleted by email: {{ data?.email }}
+    </div>
+  </div>
+</div>

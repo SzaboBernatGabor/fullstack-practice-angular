@@ -1,0 +1,12 @@
+<div [class]="divStyle">
+    <h1 class="py-2 text-white">Get all cats</h1>
+    <button (click)="fetchAllCats()" [class]="buttonStyle">GET ALL / HIDE</button>
+    <div *ngIf="!hidden">
+      <div *ngFor="let item of data" class="cat-item">
+        <div [class]="textStyle">ID: {{ item._id }}</div>
+        <div [class]="textStyle">Name: {{ item.name }}</div>
+        <div [class]="textStyle">Breed: {{ item.breed }}</div>
+        <div [class]="textStyle">Age: {{ item.age }}</div>
+      </div>
+    </div>
+  </div>

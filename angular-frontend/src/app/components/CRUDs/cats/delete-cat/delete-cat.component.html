@@ -1,0 +1,17 @@
+<div [class]="divStyle">
+    <h1 [class]="h1Style">Delete Cat</h1>
+    <input
+      [class]="inputStyle"
+      id="catId"
+      placeholder="Cat id"
+      (input)="handleInputChange($event)"
+    />
+    <button (click)="fetchDelete()" [class]="buttonStyle">DELETE</button>
+    <div *ngIf="error" class="text-red-600">{{ error }}</div>
+    <div *ngIf="data" [class]="divStyle">
+        <div [class]="textStyle">Cat deleted by id: {{ data?._id }}<br /></div>
+        <div [class]="textStyle">Name: {{ data?.name }}</div>
+        <div [class]="textStyle">Breed: {{ data?.breed }}</div>
+        <div [class]="textStyle">Age: {{ data?.age }}</div>
+    </div>
+  </div>
