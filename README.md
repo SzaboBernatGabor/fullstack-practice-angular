@@ -8,5 +8,5 @@ A reader csak lekérni tud, az editor módosítani is. Az admin jogosultsággal 
 
 ## Fontos tudnivalók:
 - A backendnek tartalmaznia kell egy .env fájlt, amiben az adatbázis connection stringje található 'MONGODB_CONN_STRING' néven.
-- A frontend portja 3000. (ng serve --host localhost --port 3000)
+- A frontend portja 3000. (Indításhoz: ng serve --host localhost --port 3000)
 - Alapértelmezetten nem létezik admin jogosultságú felhasználó, így manuálisan kell az adatbázisban az egyik felhasználó permission értékét 2-re állítani, hogy az lehessen.
