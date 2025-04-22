@@ -3,6 +3,7 @@ Egy webalkalmazás, amivel cicák adatait lehet kezelni (hozzáadni, módosítan
 - Reader (0)
 - Editor (1)
 - Admin (2)
+
 A reader csak lekérni tud, az editor módosítani is. Az admin jogosultsággal rendelkező felhasználó, a többi felhasználó fiókját is tudja módosítani: deaktiválni, törölni, jogosultságot adni.
 
 ## Fontos tudnivalók:
